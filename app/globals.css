@@ -1,0 +1,177 @@
+:root {
+  --themeColor: #192D6C;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.backgroundImage {
+  min-height: 100vh;
+
+  background-image: url("/background.png");
+  /* your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* navbar */
+.navbar {
+  background: rgba(233, 121, 211, 0.4);
+  color: #fff;
+  padding: 18 0;
+
+}
+
+.navBullet {
+  width: 60% !important;
+  margin: 0;
+}
+
+.navbody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navBullet {
+  display: flex;
+  justify-content: space-between;
+  gap: 12;
+  align-items: center;
+}
+
+.button {
+  color: #fff;
+  background: #F7AF1C;
+  padding: 10px 50px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s ease;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(180deg,
+      rgba(91, 60, 196, 0.4) 0%,
+      rgba(123, 91, 230, 0.4) 50%,
+      rgba(156, 125, 242, 0.4) 100%);
+
+  backdrop-filter: blur(10px);
+  /* 🔥 glass effect */
+  -webkit-backdrop-filter: blur(10px);
+
+  color: white;
+}
+
+
+
+/* Menu */
+.menuList {
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu Items */
+.sideTabs a {
+  outline: none;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 15px;
+  width: 100%;
+
+  border-radius: 12px;
+
+  color: white;
+  font-size: 14px;
+
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.sideTabs button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Active Tab */
+.activeTab {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+/* Bottom Button */
+.bottomBox {
+  margin-top: auto;
+}
+
+.addDealBtn {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 12px;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.addDealBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+
