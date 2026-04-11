@@ -83,8 +83,10 @@ p {
 
 .sidebar {
   width: 230px;
-  height: 100vh;
+  height: calc(100vh - 70px);
+
   padding: 20px 15px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,12 +97,10 @@ p {
       rgba(156, 125, 242, 0.4) 100%);
 
   backdrop-filter: blur(10px);
-  /* 🔥 glass effect */
   -webkit-backdrop-filter: blur(10px);
 
   color: white;
 }
-
 
 
 /* Menu */
@@ -175,3 +175,111 @@ p {
 
 
 
+/* Layout wrapper */
+.dashboardLayout {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+
+/* Main content */
+.mainContent {
+  flex: 1;
+  padding: 25px 30px;
+  overflow-y: auto;
+}
+
+
+/* *********Dash board page******* */
+ /* card */
+.statCard {
+  border-radius: 14px;
+  border: none;
+
+  background: rgba(255,255,255,0.9);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.statTitle {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+
+
+
+.statValue {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+
+
+.statGrowth {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.statArrow {
+  font-size: 22px;
+  color: #6c757d;
+}
+
+
+
+.statSmile {
+  font-size: 36px;
+}
+
+
+
+
+.statBar {
+  height: 6px;
+  width: 100%;
+}
+
+
+
+.bar-orange {
+  background: linear-gradient(
+    90deg,
+    #ff9f43,
+    #ff6b6b
+  );
+}
+
+.bar-green {
+  background: linear-gradient(
+    90deg,
+    #28c76f,
+    #81fbb8
+  );
+}
+
+.bar-blue {
+  background: linear-gradient(
+    90deg,
+    #00cfe8,
+    #1e90ff
+  );
+}
+
+.bar-purple {
+  background: linear-gradient(
+    90deg,
+    #7367f0,
+    #a29bfe
+  );
+}
