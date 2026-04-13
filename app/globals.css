@@ -79,7 +79,7 @@ p {
 }
 
 
-/* Sidebar */
+/* **************Sidebar ****************/
 
 .sidebar {
   width: 230px;
@@ -196,8 +196,11 @@ p {
 .addDealBtn:hover {
   background: rgba(255, 255, 255, 0.35);
 }
+.sideTabs span {
+  font-size: 18px;
+}
 
-
+/* **************Sidebar ****************/
 
 /* Layout wrapper */
 .dashboardLayout {
