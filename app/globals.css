@@ -191,14 +191,16 @@ p {
 
 
 /* *********Dash board page******* */
- /* card */
+
+
+/* main card */
 .statCard {
   border-radius: 14px;
   border: none;
 
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.6) !important;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 
   position: relative;
   overflow: hidden;
@@ -208,9 +210,9 @@ p {
 
 
 .statTitle {
-  font-size: 14px;
-  color: #6c757d;
-  font-weight: 500;
+  color: #625EB3;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 
@@ -253,33 +255,143 @@ p {
 
 
 .bar-orange {
-  background: linear-gradient(
-    90deg,
-    #ff9f43,
-    #ff6b6b
-  );
+  background: linear-gradient(90deg,
+      #ff9f43,
+      #ff6b6b);
 }
 
 .bar-green {
-  background: linear-gradient(
-    90deg,
-    #28c76f,
-    #81fbb8
-  );
+  background: linear-gradient(90deg,
+      #28c76f,
+      #81fbb8);
 }
 
 .bar-blue {
-  background: linear-gradient(
-    90deg,
-    #00cfe8,
-    #1e90ff
-  );
+  background: linear-gradient(90deg,
+      #00cfe8,
+      #1e90ff);
 }
 
 .bar-purple {
-  background: linear-gradient(
-    90deg,
-    #7367f0,
-    #a29bfe
-  );
+  background: linear-gradient(90deg,
+      #7367f0,
+      #a29bfe);
+}
+
+
+.horizontalLine {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+
+
+
+/* task overview card */
+
+
+/* Progress container */
+
+.customProgress {
+
+  height: 12px;
+
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+
+}
+
+
+/* Remove default colors */
+
+.customProgress .progress-bar {
+
+  border-radius: 10px;
+
+}
+
+
+/* Blue segment */
+
+.progressBlue {
+
+  background: linear-gradient(90deg,
+      #5B6CFF,
+      #3B5BDB);
+
+}
+
+
+
+/* recent card  */
+
+.activityIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+
+}
+
+.activityList {
+  padding: 0;
+}
+
+.activityListItem {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  padding: 6px;
+}
+
+
+/* Top Opportunities */
+.tableColor {
+  /* background-color: red !important; */
+
+
+  border-radius: 14px;
+  border: none;
+
+  color: white;
+}
+
+.tableColor {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.tableColor td {
+
+  background: linear-gradient(90deg,
+      #5B6CFF,
+      #5857AE);
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 12px;
+
+}
+
+/* Upcoming Meetings */
+.meetingItem {
+  display: flex;
+  align-items: center;
+}
+
+.meetingList {
+  padding: '0px' !important;
 }
