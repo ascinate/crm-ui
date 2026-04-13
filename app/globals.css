@@ -83,7 +83,7 @@ p {
 
 .sidebar {
   width: 230px;
-  height: calc(100vh - 70px);
+  height: "100%";
 
   padding: 20px 15px;
 
@@ -102,6 +102,18 @@ p {
   color: white;
 }
 
+.sidebarIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBarIconImage {
+  width: 100%;
+  height: 100%;
+}
 
 /* Menu */
 .menuList {
@@ -117,7 +129,7 @@ p {
 
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
 
   padding: 12px 15px;
   width: 100%;
@@ -131,6 +143,10 @@ p {
   cursor: pointer;
 }
 
+.sideTabs {
+  border-bottom: 2px solid rgba(0, 6, 90, 0.2);
+}
+
 /* Hover */
 .sideTabs button:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -138,8 +154,16 @@ p {
 
 /* Active Tab */
 .activeTab {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.08));
+
+  color: #ffffff;
+  font-weight: 600;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Bottom Button */
@@ -247,13 +271,25 @@ p {
 
 
 
+/* Background track */
+/* Background track (GRAY) */
 .statBar {
   height: 6px;
   width: 100%;
+  background: #CFBDE7;
+  /* gray track */
+  border-radius: 10px;
+  overflow: hidden;
 }
 
+/* Fill */
+.statBarFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
 
-
+/* Orange gradient */
 .bar-orange {
   background: linear-gradient(90deg,
       #ff9f43,
@@ -285,6 +321,62 @@ p {
   background: rgba(0, 0, 0, 0.1);
   margin: 10px 0;
 }
+
+.satisfactionBar {
+  background-color: rgb(84, 130, 111) !important;
+  color: rgb(255, 255, 255) !important;
+  padding: 6px 10px;
+}
+
+.statSmileWrapper {
+  position: relative;
+  top: 10px;
+  right: 35px;
+  width: 108px;
+  height: 106px;
+  border-radius: 50%;
+}
+
+.statSmileImg {
+  width: 100%;
+  height: 100%;
+
+}
+
+.labelText {
+  color: #27499A;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.bigCheckbox {
+  transform: scale(1.6);
+  cursor: pointer;
+  margin-right: 8px;
+
+  accent-color: #0eaa00;
+  /* changes checkbox color */
+}
+
+
+/* *********Dash board page******* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,7 +448,7 @@ p {
 }
 
 
-/* Top Opportunities */
+/* **************Top Opportunities************/
 .tableColor {
   /* background-color: red !important; */
 
@@ -378,13 +470,32 @@ p {
       #5B6CFF,
       #5857AE);
 
-  color: white;
-
+  color: #ffffff !important;
+  font-size: 18px;
   border: none;
 
   padding: 10px 12px;
 
 }
+
+
+
+
+.tableColor td span {
+  color: #ffffff !important;
+  font-size: 18px;
+}
+
+/* **************Top Opportunities************/
+
+
+
+
+
+
+
+
+
 
 /* Upcoming Meetings */
 .meetingItem {

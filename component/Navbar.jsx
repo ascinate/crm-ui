@@ -11,7 +11,9 @@ function Navbar() {
                 <Link
                     href="/"
                     className="navbar-brand d-flex align-items-center text-white">
-                    <h3 className='m-0'>LOGO</h3>
+                    <div className='navbar-logo' style={{ width: "150px", height: "30px", position: "relative" }}>
+                        <img src="/logo.png" alt="logo" style={{ width: '100%', height: '100%' }} />
+                    </div>
 
                 </Link>
 

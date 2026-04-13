@@ -1,0 +1,35 @@
+"use client";
+
+import { useRef } from "react";
+
+
+
+const pieChartData = [
+  { name: "Website", value: 38 },
+  { name: "Referral", value: 25 },
+  { name: "Social", value: 18 },
+  { name: "Email", value: 12 },
+  { name: "Ads", value: 7 }
+]
+
+const COLORS = [
+  "#5B6CFF",
+  "#7A5CD6",
+  "#4BC0C0",
+  "#F6C667",
+  "#FF6B6B"
+]
+export default function MyComponent() {
+  const inputRef = useRef(null);
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button
+        onClick={() => inputRef.current.focus()}
+      >
+        Focus Input
+      </button>
+    </div>
+  );
+}

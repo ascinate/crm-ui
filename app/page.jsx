@@ -33,7 +33,7 @@ function page() {
 
   const [checked, setChecked] = useState(false)
 
-
+  const cardProgress = 65; // %
   const dataTwo = [
     { month: "Jun", blue: 12, red: 20 },
     { month: "Jul", blue: 25, red: 18 },
@@ -152,8 +152,12 @@ function page() {
               </div>
 
             </div>
-
-            <div className="statBar bar-orange"></div>
+            <div className="statBar">
+              <div
+                className="statBarFill bar-orange"
+                style={{ width: `${cardProgress}%` }}
+              />
+            </div>
 
           </div>
         </div>
@@ -187,8 +191,12 @@ function page() {
               </div>
 
             </div>
-
-            <div className="statBar bar-green"></div>
+            <div className="statBar">
+              <div
+                className="statBarFill bar-green"
+                style={{ width: `${cardProgress}%` }}
+              />
+            </div>
 
           </div>
         </div>
@@ -223,7 +231,12 @@ function page() {
 
             </div>
 
-            <div className="statBar bar-blue"></div>
+            <div className="statBar">
+              <div
+                className="statBarFill bar-blue"
+                style={{ width: `${cardProgress}%` }}
+              />
+            </div>
 
           </div>
         </div>
@@ -232,53 +245,57 @@ function page() {
 
         {/* Card 4 */}
         <div className="col-12 col-md-6 col-xl-3">
-   <div className="card statCard stat-purple h-100">
+          <div className="card statCard stat-purple h-100">
 
-  <div className="card-body">
+            <div className="card-body">
 
-    <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center">
 
-      {/* Left Content */}
+                {/* Left Content */}
 
-      <div className="flex-grow-1">
+                <div className="flex-grow-1">
 
-        <p className="statTitle">
-          Customer Satisfaction
-        </p>
+                  <p className="statTitle">
+                    Customer Satisfaction
+                  </p>
 
-        <h3 className="statValue">
-          93%
-        </h3>
+                  <h3 className="statValue">
+                    93%
+                  </h3>
 
-        {/* Progress Badge */}
+                  {/* Progress Badge */}
 
-        <div className="satisfactionBar">
-          <span className="satisfactionText">
-            Excellent
-          </span>
-        </div>
-      </div>
+                  <div className="satisfactionBar">
+                    <span className="satisfactionText">
+                      Excellent
+                    </span>
+                  </div>
+                </div>
 
 
-      {/* Smile Icon */}
+                {/* Smile Icon */}
 
-      <div className="statSmileWrapper">
+                <div className="statSmileWrapper">
 
-        <img
-          src="/smile.png"   // your smile image
-          alt="smile"
-          className="statSmileImg"
-        />
+                  <img
+                    src="/smile.png"   // your smile image
+                    alt="smile"
+                    className="statSmileImg"
+                  />
 
-      </div>
+                </div>
 
-    </div>
+              </div>
 
-  </div>
+            </div>
+            <div className="statBar">
+              <div
+                className="statBarFill bar-purple"
+                style={{ width: `${cardProgress}%` }}
+              />
+            </div>
 
-  <div className="statBar bar-purple"></div>
-
-</div>
+          </div>
         </div>
 
       </div>
@@ -349,40 +366,45 @@ function page() {
                     newTasks[0] = !newTasks[0]
                     setTasks(newTasks)
                   }}
-                />
-                <label className="ms-2">  Follow up with Acme Corp </label>
+                  className="bigCheckbox" />
+                <label className="ms-2 labelText">  Follow up with Acme Corp </label>
               </div>
               <div className="taskOverViewForm">
                 <input type="checkbox" checked={tasks[1]} onChange={() => {
                   const newTasks = [...tasks]
                   newTasks[1] = !newTasks[1]
                   setTasks(newTasks)
-                }} />
-                <label className="ms-2">  Send contract to Green Tech</label>
+                }} className="bigCheckbox" />
+                <label className="ms-2 labelText">  Send contract to Green Tech</label>
               </div>
               <div className="taskOverViewForm">
                 <input type="checkbox" checked={tasks[2]} onChange={() => {
                   const newTasks = [...tasks]
                   newTasks[2] = !newTasks[2]
                   setTasks(newTasks)
-                }} />
-                <label className="ms-2">  Schedule demo with Orbit Ltd. </label>
+                }} className="bigCheckbox" />
+                <label className="ms-2 labelText">  Schedule demo with Orbit Ltd. </label>
               </div>
               <div className="taskOverViewForm">
-                <input type="checkbox" checked={tasks[3]} onChange={() => {
-                  const newTasks = [...tasks]
-                  newTasks[3] = !newTasks[3]
-                  setTasks(newTasks)
-                }} />
-                <label className="ms-2">  Call back Bryan Carter</label>
+                <input
+                  type="checkbox"
+                  className="bigCheckbox"
+                  checked={tasks[3]}
+                  onChange={() => {
+                    const newTasks = [...tasks]
+                    newTasks[3] = !newTasks[3]
+                    setTasks(newTasks)
+                  }}
+                />
+                <label className="ms-2 labelText">  Call back Bryan Carter</label>
               </div>
               <div className="taskOverViewForm">
                 <input type="checkbox" checked={tasks[4]} onChange={() => {
                   const newTasks = [...tasks]
                   newTasks[4] = !newTasks[4]
                   setTasks(newTasks)
-                }} />
-                <label className="ms-2">  Prepare Q2 report </label>
+                }} className="bigCheckbox" />
+                <label className="ms-2 labelText">  Prepare Q2 report </label>
               </div>
               <div className="horizontalLine" />
               <div className="d-flex">
@@ -404,9 +426,11 @@ function page() {
 
                   </div>
                 </div>
-                <p className="mb-0">
+                <p className="mb-0 mx-2" style={{ fontWeight: 600, fontSize: '18px' }}>
                   {completed}/{tasks.length}
                 </p>
+
+                <p style={{ color: '#2A4D9B', fontSize: '18px', fontWeight: 600, }}>Complete</p>
 
               </div>
             </div>
@@ -432,35 +456,65 @@ function page() {
               <div className="horizontalLine" />
               <div style={{ width: "100%", height: 220 }}>
                 <ResponsiveContainer>
-
                   <LineChart data={dataTwo}>
 
                     {/* Grid */}
                     <CartesianGrid
-                      strokeDasharray="3 3"
-                      opacity={0.3}
+                      strokeDasharray="4 4"
+                      vertical={false}
+                      stroke="#d6d6e7"
+                      opacity={0.5}
                     />
 
                     {/* X Axis */}
                     <XAxis
                       dataKey="month"
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fill: "#6b6b8d", fontSize: 13 }}
                     />
 
                     {/* Y Axis */}
                     <YAxis
                       domain={[10, 40]}
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fill: "#6b6b8d", fontSize: 13 }}
+                      tickFormatter={(value) => `${value}%`}
                     />
 
                     {/* Tooltip */}
-                    <Tooltip />
+                    <Tooltip
+                      contentStyle={{
+                        background: "#5B6CFF",
+                        border: "none",
+                        borderRadius: "8px",
+                        color: "#fff",
+                        fontWeight: "600"
+                      }}
+                      labelStyle={{
+                        color: "#fff"
+                      }}
+                      cursor={{ stroke: "#5B6CFF", strokeWidth: 1 }}
+                    />
 
-                    {/* Blue Line */}
+                    {/* Purple Line */}
                     <Line
                       type="monotone"
                       dataKey="blue"
                       stroke="#5B6CFF"
                       strokeWidth={3}
-                      dot={{ r: 5 }}
+                      dot={{
+                        r: 5,
+                        strokeWidth: 2,
+                        fill: "#5B6CFF"
+                      }}
+                      activeDot={{
+                        r: 6,
+                        fill: "#fff",
+                        stroke: "#5B6CFF",
+                        strokeWidth: 2
+                      }}
                     />
 
                     {/* Red Line */}
@@ -469,8 +523,12 @@ function page() {
                       dataKey="red"
                       stroke="#FF6B6B"
                       strokeWidth={3}
-                      dot={{ r: 5 }}
+                      dot={{
+                        r: 5,
+                        fill: "#FF6B6B"
+                      }}
                     />
+
                   </LineChart>
                 </ResponsiveContainer>
               </div>

@@ -31,7 +31,9 @@ function Sidebar() {
             href="/"
             className={`tabLink ${pathname === "/" ? "activeTab" : ""}`}
           >
-            <House size={18} />
+            <div className='sidebarIcon'>
+              <img src="/home.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Dashboard</span>
           </Link>
         </li>
@@ -42,7 +44,9 @@ function Sidebar() {
             href="/leads"
             className={`tabLink ${pathname === "/leads" ? "activeTab" : ""}`}
           >
-            <Users size={18} />
+            <div className='sidebarIcon'>
+              <img src="/user.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Leads</span>
           </Link>
         </li>
@@ -53,7 +57,9 @@ function Sidebar() {
             href="/sales"
             className={`tabLink ${pathname === "/sales" ? "activeTab" : ""}`}
           >
-            <BarChart3 size={18} />
+            <div className='sidebarIcon'>
+              <img src="/col.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Sales</span>
           </Link>
         </li>
@@ -64,7 +70,9 @@ function Sidebar() {
             href="/reports"
             className={`tabLink ${pathname === "/reports" ? "activeTab" : ""}`}
           >
-            <FileText size={18} />
+            <div className='sidebarIcon'>
+              <img src="/trading.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Reports</span>
           </Link>
         </li>
@@ -75,7 +83,9 @@ function Sidebar() {
             href="/products"
             className={`tabLink ${pathname === "/products" ? "activeTab" : ""}`}
           >
-            <Box size={18} />
+            <div className='sidebarIcon'>
+              <img src="/file.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Products</span>
           </Link>
         </li>
@@ -86,7 +96,9 @@ function Sidebar() {
             href="/campaigns"
             className={`tabLink ${pathname === "/campaigns" ? "activeTab" : ""}`}
           >
-            <Megaphone size={18} />
+            <div className='sidebarIcon'>
+              <img src="/mar.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Campaigns</span>
           </Link>
         </li>
@@ -97,7 +109,9 @@ function Sidebar() {
             href="/analytics"
             className={`tabLink ${pathname === "/analytics" ? "activeTab" : ""}`}
           >
-            <PieChart size={18} />
+            <div className='sidebarIcon'>
+              <img src="/chart.png" alt="" className='sideBarIconImage' />
+            </div>
             <span>Analytics</span>
           </Link>
         </li>
